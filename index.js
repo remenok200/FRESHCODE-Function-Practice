@@ -1,6 +1,6 @@
 
 // ЗАДАНИЕ 1. Проверка числа на четность
-let isOdd = function(number) {
+let isEven = function(number) {
     if (number % 2 === 0) return true;
     else if (number % 2 === 1) return false;
     else return 'ERROR! Введите одно число, которое хотите проверить на четность';
