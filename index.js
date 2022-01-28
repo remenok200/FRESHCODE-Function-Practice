@@ -26,9 +26,8 @@ console.log(minNumber('test'));
 
 // ЗАДАНИЕ 3. Функция, определяющая, хватит ли у пользователя денег на покупку
 let moneyEnough = function(money, cost) {
-    if (cost <= money) return true;
-    else if (cost > money) return false;
-    else return 'ERROR! Введите сначало количество имеющихся у Вас денег, а потом цену на товар, что хотите купить';
+    if((typeof money !== "string") && (typeof cost !== "string")) return cost <= money;
+    return 'ERROR! Введите сначало количество имеющихся у Вас денег, а потом цену на товар, что хотите купить';
 }
 
 console.log(moneyEnough(1500, 250));
