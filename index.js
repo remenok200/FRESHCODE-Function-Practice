@@ -1,14 +1,13 @@
 
 // ЗАДАНИЕ 1. Проверка числа на четность
 let isEven = function(number) {
-    if (number % 2 === 0) return true;
-    else if (number % 2 === 1) return false;
-    else return 'ERROR! Введите одно число, которое хотите проверить на четность';
+    if(typeof number !== "string") return number % 2 === 0;
+    return 'ERROR! Введите одно ЧИСЛО (!), которое хотите проверить на четность';
 }
 
-console.log(isOdd(5));
-console.log(isOdd(6));
-console.log(isOdd('test'));
+console.log(isEven(5));
+console.log(isEven(6));
+console.log(isEven('test'));
 
 
 
