@@ -13,9 +13,9 @@ console.log(isEven('test'));
 
 // ЗАДАНИЕ 2. Функция, возвращающая наименьшее из двух чисел
 let minNumber = function(number1, number2) {
+    if((typeof number1 !== "number") && (typeof number2 !== "number")) return 'ERROR! Введите два числа, которые хотите сравнить и получить наименьшее из них'
     if (number1 < number2) return number1;
-    else if (number1 > number2) return number2;
-    else return 'ERROR! Введите два числа, которые хотите сравнить и получить наименьшее из них';
+    else return number2;
 }
 
 console.log(minNumber(5, 6));
