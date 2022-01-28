@@ -1,8 +1,8 @@
 
 // ЗАДАНИЕ 1. Проверка числа на четность
 let isEven = function(number) {
-    if(typeof number !== "string") return number % 2 === 0;
-    return 'ERROR! Введите одно ЧИСЛО (!), которое хотите проверить на четность';
+    if(typeof number !== "number") return 'ERROR! Введите одно ЧИСЛО (!), которое хотите проверить на четность';
+    else return number % 2 === 0;
 }
 
 console.log(isEven(5));
@@ -26,8 +26,8 @@ console.log(minNumber('test'));
 
 // ЗАДАНИЕ 3. Функция, определяющая, хватит ли у пользователя денег на покупку
 let moneyEnough = function(money, cost) {
-    if((typeof money !== "string") && (typeof cost !== "string")) return cost <= money;
-    return 'ERROR! Введите сначало количество имеющихся у Вас денег, а потом цену на товар, что хотите купить';
+    if((typeof money !== "number") && (typeof cost !== "number")) return 'ERROR! Введите сначало количество имеющихся у Вас денег, а потом цену на товар, что хотите купить';
+    else return cost <= money;
 }
 
 console.log(moneyEnough(1500, 250));
@@ -38,9 +38,9 @@ console.log(moneyEnough('150k', 250));
 
 // ЗАДАНИЕ 4. Функция, которая возвращает абсолютную величину числа
 let myAbs = function(number) {
-    if (number < 0) return -number;
-    else if (number > 0) return number;
-    else return 'ERROR! Введите число, абсолютную величину которого хотите получить';
+    if(typeof number !== "number") return 'ERROR! Введите число, абсолютную величину которого хотите получить';
+    else if(number < 0) return -number;
+    else return number;
 }
 console.log(myAbs(-5));
 console.log(myAbs(10));
